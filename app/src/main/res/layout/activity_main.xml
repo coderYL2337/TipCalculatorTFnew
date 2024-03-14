@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/baseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Base"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <EditText
+        android:id="@+id/baseInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="45.99"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/baseLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toEndOf="@+id/baseLabel"
+        tools:textSize="30sp" />
+
+    <SeekBar
+        android:id="@+id/tipSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/baseInput"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/baseInput"
+        app:layout_constraintTop_toBottomOf="@+id/baseInput" />
+
+    <TextView
+        android:id="@+id/tipQualityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tipSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/tipSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/tipSeekBar"
+        tools:text="Poor" />
+
+    <TextView
+        android:id="@+id/tippercentShowTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tipSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/baseLabel"
+        />
+
+    <TextView
+        android:id="@+id/percentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="%"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tippercentShowTv"
+        app:layout_constraintStart_toEndOf="@id/tippercentShowTv" />
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Tip"
+        android:textColor="@color/material_dynamic_primary70"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/baseLabel"
+        app:layout_constraintStart_toStartOf="@+id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tippercentShowTv"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tipShowTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tipLabel"
+        app:layout_constraintEnd_toEndOf="@+id/baseInput"
+        app:layout_constraintStart_toStartOf="@+id/baseInput"
+        tools:textSize="30sp"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:text="Total"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/tipLabel"
+        app:layout_constraintStart_toStartOf="@+id/tipLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tipLabel"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/totalShowTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tipShowTv"
+        app:layout_constraintStart_toStartOf="@+id/tipShowTv" />
+
+    <TextView
+        android:id="@+id/partyLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Party"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/totalLabel"
+        app:layout_constraintStart_toStartOf="@+id/totalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalLabel"
+        tools:textStyle="bold" />
+
+    <NumberPicker
+        android:id="@+id/partyPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/partyLabel"
+        app:layout_constraintTop_toBottomOf ="@id/totalShowTv"
+        app:layout_constraintBottom_toTopOf="@id/splitSwitch"
+        />
+
+    <Switch
+        android:id="@+id/splitSwitch"
+        android:layout_width="111dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="70dp"
+        android:text="Split"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/partyLabel"
+        app:layout_constraintTop_toBottomOf="@+id/partyLabel"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/splitShowTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/splitSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/totalShowTv"
+        app:layout_constraintStart_toStartOf="@+id/totalShowTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

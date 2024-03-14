@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TipCalculatorTFnew</string>
+    <string name="split_amount_format">Each person pays: $%.2f</string>
+</resources>
